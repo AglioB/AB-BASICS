@@ -21,3 +21,6 @@ TriggerClientEvent('ab-basics:client:SendMText', source, "show/hide", "TITLE: ",
 # MOSTRAR TEXTO DE MISION NATIVO #
 
 TriggerClientEvent('ab-basics:client:MissionText', source, text, time)
+
+
+## THIS SCRIPT IS IN CONSTANTLY UPDATES ##
