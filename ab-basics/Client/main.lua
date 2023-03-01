@@ -1,29 +1,3 @@
-local QBCore = exports['qb-core']:GetCoreObject()
-
---<!>-- ACTUALIZAR JOBS --<!>--
-
-PlayerJob = {}
-
-
-AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
-        local Player = QBCore.Functions.GetPlayerData()
-        PlayerJob = Player.job
-        PlayerJob.onduty = Player.job.onduty
-end)
-
-RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
-        PlayerJob = JobInfo
-end)
-
-RegisterNetEvent("QBCore:Client:SetDuty", function(newDuty)
-        PlayerJob.onduty = newDuty
-end)
-
-
-RegisterNetEvent("ab-mechanicjob:client:Servicio", function()
-    TriggerServerEvent("QBCore:ToggleDuty")
-end)
-
 
 --<!>-- ANUNCIO EN PANTALLA --<!>--
 
