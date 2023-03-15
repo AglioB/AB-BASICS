@@ -105,8 +105,8 @@ RegisterNetEvent('ab-basics:client:SendMText', function (action, title, text, po
 end)
 
 
-RegisterCommand('testeo', function ()
-    exports['ab-basics']:SendMText("show", "Titulo: ", "TEXTOOOOOOOO", "bottomCenter")
-    Wait(5000)
-    exports['ab-basics']:SendMText("hide")
+
+exports('SendLog', function(message, webhook)
+    if message == nil or message == '' then return end
+    TriggerServerEvent('ab-basic:SendLog', message, webhook)
 end)
